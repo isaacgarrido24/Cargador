@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CargaPro - Cargador Premium Ultra Rápido</title>
+    <meta name="description" content="Cargador universal ultra rápido con tecnología avanzada. Carga tu dispositivo en minutos.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect x="6" y="8" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                        <line x1="12" y1="5" x2="12" y2="8" stroke="currentColor" stroke-width="2"/>
+                        <line x1="20" y1="5" x2="20" y2="8" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>CargaPro</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#producto">Producto</a></li>
+                    <li><a href="#resenas">Reseñas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#carrito" class="carrito-btn">
+                        🛒 <span class="carrito-count">0</span>
+                    </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Cargador Ultra Rápido CargaPro</h1>
+                <p>La tecnología de carga más rápida del mercado. Carga completa en menos de 30 minutos.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="document.getElementById('producto').scrollIntoView({behavior: 'smooth'})">
+                        Comprar Ahora
+                    </button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('resenas').scrollIntoView({behavior: 'smooth'})">
+                        Leer Reseñas
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <svg viewBox="0 0 300 400" width="300" height="400">
+                    <!-- Cargador ilustrado -->
+                    <defs>
+                        <linearGradient id="cargarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="50" y="80" width="200" height="240" rx="20" fill="url(#cargarGradient)" />
+                    <rect x="70" y="100" width="160" height="200" rx="15" fill="#ffffff" opacity="0.1" />
+                    <!-- Puertos -->
+                    <rect x="80" y="250" width="40" height="35" rx="5" fill="#1a1a1a" />
+                    <circle cx="85" cy="265" r="3" fill="#666" />
+                    <circle cx="95" cy="265" r="3" fill="#666" />
+                    <rect x="140" y="250" width="40" height="35" rx="5" fill="#1a1a1a" />
+                    <circle cx="145" cy="265" r="3" fill="#666" />
+                    <circle cx="155" cy="265" r="3" fill="#666" />
+                    <!-- Indicadores LED -->
+                    <circle cx="140" cy="140" r="6" fill="#10b981" />
+                    <circle cx="160" cy="140" r="6" fill="#f59e0b" />
+                    <!-- Brillo -->
+                    <ellipse cx="120" cy="150" rx="30" ry="40" fill="#ffffff" opacity="0.15" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Producto Section -->
+    <section id="producto" class="producto">
+        <div class="container">
+            <h2>Especificaciones del Producto</h2>
+            
+            <div class="producto-grid">
+                <div class="producto-imagenes">
+                    <div class="imagen-principal">
+                        <svg viewBox="0 0 400 400" width="100%">
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="70" y="50" width="260" height="320" rx="30" fill="url(#grad1)" />
+                            <rect x="95" y="75" width="210" height="270" rx="25" fill="#ffffff" opacity="0.1" />
+                            <rect x="130" y="320" width="140" height="40" rx="10" fill="#1a1a1a" />
+                            <circle cx="150" cy="340" r="4" fill="#666" />
+                            <circle cx="170" cy="340" r="4" fill="#666" />
+                            <circle cx="190" cy="340" r="4" fill="#666" />
+                            <circle cx="210" cy="340" r="4" fill="#666" />
+                            <circle cx="230" cy="340" r="4" fill="#666" />
+                            <circle cx="175" cy="140" r="8" fill="#10b981" />
+                            <circle cx="225" cy="140" r="8" fill="#f59e0b" />
+                            <ellipse cx="150" cy="180" rx="40" ry="50" fill="#ffffff" opacity="0.2" />
+                        </svg>
+                    </div>
+                    <div class="imagenes-miniaturas">
+                        <div class="mini-img" onclick="changeImage(this)" style="background: linear-gradient(135deg, #3b82f6, #1e40af);"></div>
+                        <div class="mini-img" onclick="changeImage(this)" style="background: linear-gradient(135deg, #1e40af, #1e3a8a);"></div>
+                        <div class="mini-img" onclick="changeImage(this)" style="background: linear-gradient(135deg, #0f172a, #0c0e15);"></div>
+                    </div>
+                </div>
+
+                <div class="producto-info">
+                    <h3>CargaPro Ultra 100W</h3>
+                    
+                    <div class="rating">
+                        <div class="stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                        </div>
+                        <span class="rating-count">(4.8 / 5 - 128 reseñas)</span>
+                    </div>
+
+                    <div class="precio-section">
+                        <div class="precio">
+                            <span class="precio-actual">$49.99</span>
+                            <span class="precio-original">$79.99</span>
+                            <span class="descuento">-37%</span>
+                        </div>
+                    </div>
+
+                    <div class="caracteristicas">
+                        <h4>Características Principales:</h4>
+                        <ul>
+                            <li>⚡ Carga ultra rápida de 100W</li>
+                            <li>🔌 Compatible con todos los dispositivos</li>
+                            <li>🌡️ Protección térmica inteligente</li>
+                            <li>🔋 Batería de carga rápida</li>
+                            <li>📱 Puertos USB-C y Lightning</li>
+                            <li>🛡️ Garantía de 3 años</li>
+                        </ul>
+                    </div>
+
+                    <div class="especificaciones">
+                        <h4>Especificaciones Técnicas:</h4>
+                        <table class="specs-table">
+                            <tr>
+                                <td>Potencia</td>
+                                <td>100W</td>
+                            </tr>
+                            <tr>
+                                <td>Tiempo de carga</td>
+                                <td>20-30 minutos</td>
+                            </tr>
+                            <tr>
+                                <td>Puertos</td>
+                                <td>USB-C x2, Lightning</td>
+                            </tr>
+                            <tr>
+                                <td>Peso</td>
+                                <td>250g</td>
+                            </tr>
+                            <tr>
+                                <td>Dimensiones</td>
+                                <td>12 x 8 x 3 cm</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="cantidad-section">
+                        <label for="cantidad">Cantidad:</label>
+                        <div class="cantidad-control">
+                            <button class="btn-cantidad" onclick="decreaseQuantity()">−</button>
+                            <input type="number" id="cantidad" value="1" min="1" max="100">
+                            <button class="btn-cantidad" onclick="increaseQuantity()">+</button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-comprar" onclick="addToCart()">
+                        🛒 Agregar al Carrito
+                    </button>
+
+                    <div class="beneficios">
+                        <p>✓ Envío gratis en pedidos mayores a $50</p>
+                        <p>✓ Devolución fácil en 30 días</p>
+                        <p>✓ Pago seguro 100% garantizado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reseñas Section -->
+    <section id="resenas" class="resenas">
+        <div class="container">
+            <h2>Reseñas de Clientes</h2>
+            
+            <div class="resenas-header">
+                <div class="resenas-rating">
+                    <div class="resenas-rating-grande">
+                        <span class="numero">4.8</span>
+                        <span class="texto">de 5</span>
+                    </div>
+                    <div class="resenas-stars">
+                        <div class="star-bar">
+                            <span class="bar-label">⭐⭐⭐⭐⭐</span>
+                            <div class="bar"><div class="bar-fill" style="width: 65%"></div></div>
+                            <span class="bar-count">65%</span>
+                        </div>
+                        <div class="star-bar">
+                            <span class="bar-label">⭐⭐⭐⭐</span>
+                            <div class="bar"><div class="bar-fill" style="width: 25%"></div></div>
+                            <span class="bar-count">25%</span>
+                        </div>
+                        <div class="star-bar">
+                            <span class="bar-label">⭐⭐⭐</span>
+                            <div class="bar"><div class="bar-fill" style="width: 8%"></div></div>
+                            <span class="bar-count">8%</span>
+                        </div>
+                        <div class="star-bar">
+                            <span class="bar-label">⭐⭐</span>
+                            <div class="bar"><div class="bar-fill" style="width: 2%"></div></div>
+                            <span class="bar-count">2%</span>
+                        </div>
+                        <div class="star-bar">
+                            <span class="bar-label">⭐</span>
+                            <div class="bar"><div class="bar-fill" style="width: 0%"></div></div>
+                            <span class="bar-count">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" onclick="openReviewModal()">Escribir Reseña</button>
+            </div>
+
+            <div class="resenas-list">
+                <div class="resena-card">
+                    <div class="resena-header">
+                        <div class="resena-user">
+                            <div class="user-avatar">JM</div>
+                            <div class="user-info">
+                                <h4>Juan Miguel</h4>
+                                <span class="verified">✓ Compra verificada</span>
+                            </div>
+                        </div>
+                        <div class="resena-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="resena-title"><strong>¡Increíble, la mejor compra que he hecho!</strong></p>
+                    <p class="resena-texto">Este cargador es realmente rápido. Mi teléfono se cargó completamente en 25 minutos. La calidad es excelente y el envío fue super rápido. Lo recomiendo ampliamente a todos mis amigos.</p>
+                    <span class="resena-fecha">Hace 2 semanas</span>
+                    <div class="resena-helpful">
+                        <button onclick="markHelpful(this)">👍 Útil (42)</button>
+                    </div>
+                </div>
+
+                <div class="resena-card">
+                    <div class="resena-header">
+                        <div class="resena-user">
+                            <div class="user-avatar">MC</div>
+                            <div class="user-info">
+                                <h4>María Castellanos</h4>
+                                <span class="verified">✓ Compra verificada</span>
+                            </div>
+                        </div>
+                        <div class="resena-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="resena-title"><strong>Producto de calidad premium</strong></p>
+                    <p class="resena-texto">Llevo 3 meses usando el CargaPro y no tengo ninguna queja. Es muy resistente, carga rápido y los puertos están bien diseñados. El mejor cargador que he tenido.</p>
+                    <span class="resena-fecha">Hace 1 mes</span>
+                    <div class="resena-helpful">
+                        <button onclick="markHelpful(this)">👍 Útil (38)</button>
+                    </div>
+                </div>
+
+                <div class="resena-card">
+                    <div class="resena-header">
+                        <div class="resena-user">
+                            <div class="user-avatar">RP</div>
+                            <div class="user-info">
+                                <h4>Roberto Pérez</h4>
+                                <span class="verified">✓ Compra verificada</span>
+                            </div>
+                        </div>
+                        <div class="resena-stars">⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="resena-title"><strong>Muy bueno, recomendado</strong></p>
+                    <p class="resena-texto">Excelente cargador, muy rápido. La única razón por la que no doy 5 estrellas es porque hubiera preferido que viniera con un cable incluido, pero el producto en sí es fantástico.</p>
+                    <span class="resena-fecha">Hace 3 semanas</span>
+                    <div class="resena-helpful">
+                        <button onclick="markHelpful(this)">👍 Útil (28)</button>
+                    </div>
+                </div>
+
+                <div class="resena-card">
+                    <div class="resena-header">
+                        <div class="resena-user">
+                            <div class="user-avatar">SL</div>
+                            <div class="user-info">
+                                <h4>Sofia López</h4>
+                                <span class="verified">✓ Compra verificada</span>
+                            </div>
+                        </div>
+                        <div class="resena-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="resena-title"><strong>Vale cada peso invertido</strong></p>
+                    <p class="resena-texto">Cambié mi antiguo cargador por este y no me arrepiento. Es mucho más eficiente, no calienta como los otros y carga todos mis dispositivos sin problemas. 10/10.</p>
+                    <span class="resena-fecha">Hace 10 días</span>
+                    <div class="resena-helpful">
+                        <button onclick="markHelpful(this)">👍 Útil (55)</button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-secondary" onclick="loadMoreReviews()">Cargar más reseñas</button>
+        </div>
+    </section>
+
+    <!-- Carrito Modal -->
+    <div id="carritoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Tu Carrito de Compras</h2>
+            
+            <div id="carritoItems" class="carrito-items">
+                <p class="carrito-vacio">Tu carrito está vacío</p>
+            </div>
+
+            <div class="carrito-resumen">
+                <div class="resumen-item">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="resumen-item">
+                    <span>Envío:</span>
+                    <span id="envio">Gratis</span>
+                </div>
+                <div class="resumen-item">
+                    <span>Impuesto (aprox):</span>
+                    <span id="impuesto">$0.00</span>
+                </div>
+                <div class="resumen-item total">
+                    <span>Total:</span>
+                    <span id="total">$0.00</span>
+                </div>
+            </div>
+
+            <button class="btn btn-primary btn-compra-completa" onclick="proceedToCheckout()">
+                Proceder al Pago
+            </button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCheckout()">&times;</span>
+            <h2>Formulario de Pago</h2>
+            
+            <form id="checkoutForm" class="checkout-form">
+                <div class="form-section">
+                    <h3>Información de Envío</h3>
+                    <div class="form-group">
+                        <input type="text" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Teléfono" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Dirección" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="Ciudad" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Código postal" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="País" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Información de Pago</h3>
+                    <div class="form-group">
+                        <input type="text" placeholder="Nombre del titular" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Número de tarjeta" maxlength="19" id="cardNumber" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="MM/AA" maxlength="5" id="expiry" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="CVV" maxlength="4" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="terminos" required>
+                    <label for="terminos">Acepto los términos y condiciones</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-pagar">💳 Completar Pago</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeReviewModal()">&times;</span>
+            <h2>Escribir una Reseña</h2>
+            
+            <form id="reviewForm" class="review-form">
+                <div class="form-group">
+                    <label for="reviewName">Tu nombre:</label>
+                    <input type="text" id="reviewName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reviewEmail">Tu email:</label>
+                    <input type="email" id="reviewEmail" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Tu calificación:</label>
+                    <div class="star-rating">
+                        <span class="star" value="1" onclick="setRating(1)">★</span>
+                        <span class="star" value="2" onclick="setRating(2)">★</span>
+                        <span class="star" value="3" onclick="setRating(3)">★</span>
+                        <span class="star" value="4" onclick="setRating(4)">★</span>
+                        <span class="star" value="5" onclick="setRating(5)">★</span>
+                    </div>
+                    <input type="hidden" id="reviewRating" value="5">
+                </div>
+
+                <div class="form-group">
+                    <label for="reviewTitle">Título de la reseña:</label>
+                    <input type="text" id="reviewTitle" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reviewText">Tu reseña:</label>
+                    <textarea id="reviewText" rows="4" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar Reseña</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>CargaPro</h4>
+                    <p>Líderes en tecnología de carga rápida y sostenible.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#producto">Producto</a></li>
+                        <li><a href="#resenas">Reseñas</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>📧 info@cargapro.com</li>
+                        <li>📞 +1 (555) 123-4567</li>
+                        <li>📍 123 Tech Street, San Francisco</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociales</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CargaPro. Todos los derechos reservados. | <a href="#">Privacidad</a> | <a href="#">Términos</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

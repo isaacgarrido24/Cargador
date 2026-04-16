@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación - CargaPro Tienda</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        header h1 {
+            color: #3b82f6;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .files-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .file-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .file-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .file-card.html {
+            border-left-color: #f59e0b;
+        }
+        
+        .file-card.css {
+            border-left-color: #8b5cf6;
+        }
+        
+        .file-card.js {
+            border-left-color: #fbbf24;
+        }
+        
+        .file-card.docs {
+            border-left-color: #10b981;
+        }
+        
+        .file-card.config {
+            border-left-color: #ef4444;
+        }
+        
+        .file-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .file-card h3 {
+            color: #1f2937;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .file-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .file-card code {
+            background: #f3f4f6;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #d946ef;
+        }
+        
+        .quick-start {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+        
+        .quick-start h2 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .quick-start ol {
+            margin-left: 20px;
+            line-height: 2;
+        }
+        
+        .quick-start li {
+            margin-bottom: 10px;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+        
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            color: #666;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background: #1e40af;
+            transform: translateY(-2px);
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Documentación CargaPro</h1>
+            <p>Guía completa de tu tienda online profesional - Todos los archivos y recursos que necesitas</p>
+        </header>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">8</div>
+                <div class="stat-label">Archivos Principales</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Guías Documentadas</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Funcional</div>
+            </div>
+        </div>
+        
+        <div class="quick-start">
+            <h2>⚡ INICIO RÁPIDO (5 minutos)</h2>
+            <ol>
+                <li><strong>Abre</strong> el archivo <code>index.html</code> en tu navegador (doble clic)</li>
+                <li><strong>Personaliza</strong> nombre, precio y email en los archivos</li>
+                <li><strong>Prueba</strong> todas las funciones (carrito, checkout, reseñas)</li>
+                <li><strong>Sube</strong> a internet usando Netlify, Vercel o GitHub Pages</li>
+            </ol>
+            <a href="GUIA_RAPIDA.md" class="btn">📖 Leer Guía Rápida Completa</a>
+        </div>
+        
+        <h2 style="color: #1f2937; margin-bottom: 30px;">📂 TUS ARCHIVOS</h2>
+        
+        <div class="files-grid">
+            <!-- Archivo Principal -->
+            <div class="file-card html">
+                <div class="file-icon">📄</div>
+                <span class="badge">Principal</span>
+                <h3>index.html</h3>
+                <p>Tu página web completa. Contiene toda la estructura HTML semántica con:</p>
+                <ul style="margin-left: 15px; color: #666; font-size: 0.9rem;">
+                    <li>Header y navegación</li>
+                    <li>Hero section</li>
+                    <li>Detalles del producto</li>
+                    <li>Sistema de reseñas</li>
+                    <li>Formularios de pago</li>
+                    <li>Footer</li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: 600; font-size: 0.9rem;">✅ Lista para usar - Solo personaliza el contenido</p>
+            </div>
+            
+            <!-- CSS -->
+            <div class="file-card css">
+                <div class="file-icon">🎨</div>
+                <span class="badge">Estilos</span>
+                <h3>css/styles.css</h3>
+                <p>Diseño profesional, responsivo y moderno que incluye:</p>
+                <ul style="margin-left: 15px; color: #666; font-size: 0.9rem;">
+                    <li>Variables CSS para colores</li>
+                    <li>Diseño responsivo (móvil, tablet, desktop)</li>
+                    <li>Animaciones suaves</li>
+                    <li>Temas de gradientes</li>
+                    <li>Estilos para modales</li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: 600; font-size: 0.9rem;">🎨 Personaliza los colores fácilmente</p>
+            </div>
+            
+            <!-- JavaScript -->
+            <div class="file-card js">
+                <div class="file-icon">⚙️</div>
+                <span class="badge">Funcionalidad</span>
+                <h3>js/main.js</h3>
+                <p>Toda la lógica interactiva con funciones para:</p>
+                <ul style="margin-left: 15px; color: #666; font-size: 0.9rem;">
+                    <li>Carrito de compras funcional</li>
+                    <li>Gestión de cantidad</li>
+                    <li>Formulario de pago</li>
+                    <li>Sistema de reseñas</li>
+                    <li>Notificaciones elegantes</li>
+                    <li>LocalStorage (persistencia)</li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: 600; font-size: 0.9rem;">✨ 100% funcional, listo para uso</p>
+            </div>
+            
+            <!-- Guía Rápida -->
+            <div class="file-card docs">
+                <div class="file-icon">🚀</div>
+                <span class="badge">Empezar</span>
+                <h3>GUIA_RAPIDA.md</h3>
+                <p>La guía que debería haber leído primero. Te muestra cómo:</p>
+                <ul style="margin-left: 15px; color: #666; font-size: 0.9rem;">
+                    <li>Abrir la página (30 segundos)</li>
+                    <li>Personalizar en 5 minutos</li>
+                    <li>Cambiar colores, precios, texto</li>
+                    <li>Probar todas las funciones</li>
+                    <li>Subir a internet GRATIS</li>
+                </ul>
+                <a href="GUIA_RAPIDA.md" class="btn">Leer Ahora →</a>
+            </div>
+            
+            <!-- README Completo -->
+            <div class="file-card docs">
+                <div class="file-icon">📖</div>
+                <span class="badge">Documentación</span>
+                <h3>README.md</h3>
+                <p>Documentación completa del proyecto con:</p>
+                <ul style="margin-left: 15px; color: #666; font-size: 0.9rem;">
+                    <li>Descripción de características</li>
+                    <li>Estructura de archivos</li>
+                    <li>Personalizaciones fáciles</li>
+                    <li>Solución de problemas</li>
+                    <li>Opciones de hosting</li>
+                </ul>
+                <a href="README.md" class="btn">Ver Documentación →</a>
+            </div>
+            
+            <!-- Integraciones -->
+            <div class="file-card config">
+                <div class="file-icon">🔌</div>
+                <span class="badge">Avanzado</span>
+                <h3>INTEGRACIONES.md</h3>
+                <p>Conecta servicios reales como:</p>
+                <ul style="margin-left: 15px; color: #666; font-size: 0.9rem;">
+                    <li>Stripe (pagos con tarjeta)</li>
+                    <li>MercadoPago (Latinoamérica)</li>
+                    <li>SendGrid (emails)</li>
+                    <li>Google Analytics</li>
+                    <li>Ejemplos de código completos</li>
+                </ul>
+                <a href="INTEGRACIONES.md" class="btn">Ver Integraciones →</a>
+            </div>
+            
+            <!-- Checklist Producción -->
+            <div class="file-card config">
+                <div class="file-icon">✅</div>
+                <span class="badge">Pre-Lanzamiento</span>
+                <h3>CHECKLIST_PRODUCCION.md</h3>
+                <p>Todo lo que necesitas antes de vender en vivo:</p>
+                <ul style="margin-left: 15px; color: #666; font-size: 0.9rem;">
+                    <li>Configuración de seguridad</li>
+                    <li>Setup de pagos</li>
+                    <li>Emails transaccionales</li>
+                    <li>SEO y analytics</li>
+                    <li>Testing completo</li>
+                </ul>
+                <a href="CHECKLIST_PRODUCCION.md" class="btn">Ver Checklist →</a>
+            </div>
+            
+            <!-- Config -->
+            <div class="file-card config">
+                <div class="file-icon">⚙️</div>
+                <span class="badge">Configuración</span>
+                <h3>config.js</h3>
+                <p>Configuración centralizada del proyecto:</p>
+                <ul style="margin-left: 15px; color: #666; font-size: 0.9rem;">
+                    <li>Datos del sitio</li>
+                    <li>Información de productos</li>
+                    <li>API keys (template)</li>
+                    <li>Funciones auxiliares</li>
+                    <li>Métodos de pago</li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: 600; font-size: 0.9rem;">🔧 Editar aquí para cambios globales</p>
+            </div>
+        </div>
+        
+        <h2 style="color: #1f2937; margin: 40px 0 30px 0; font-size: 1.8rem;">📊 FUNCIONALIDADES INCLUIDAS</h2>
+        
+        <div class="files-grid">
+            <div class="file-card" style="border-left-color: #10b981;">
+                <div class="file-icon">🛒</div>
+                <h3>Carrito de Compras</h3>
+                <p>✅ Agregar/quitar productos<br>✅ Actualizar cantidades<br>✅ Cálculo automático<br>✅ Persistencia con LocalStorage</p>
+            </div>
+            
+            <div class="file-card" style="border-left-color: #10b981;">
+                <div class="file-icon">💳</div>
+                <h3>Gestión de Pagos</h3>
+                <p>✅ Formulario profesional<br>✅ Validación de datos<br>✅ Cálculo de impuestos<br>✅ Costo de envío dinámico</p>
+            </div>
+            
+            <div class="file-card" style="border-left-color: #10b981;">
+                <div class="file-icon">⭐</div>
+                <h3>Reseñas y Ratings</h3>
+                <p>✅ Sistema de 5 estrellas<br>✅ Estadísticas de calificación<br>✅ Formulario para escribir reseñas<br>✅ Botón "Útil"</p>
+            </div>
+            
+            <div class="file-card" style="border-left-color: #10b981;">
+                <div class="file-icon">📱</div>
+                <h3>Diseño Responsivo</h3>
+                <p>✅ Funciona en móvil<br>✅ Funciona en tablet<br>✅ Funciona en desktop<br>✅ Optimizado para todos los tamaños</p>
+            </div>
+            
+            <div class="file-card" style="border-left-color: #10b981;">
+                <div class="file-icon">🎨</div>
+                <h3>Diseño Profesional</h3>
+                <p>✅ Tema moderno azul<br>✅ Gradientes elegantes<br>✅ Animaciones suaves<br>✅ Tipografía profesional</p>
+            </div>
+            
+            <div class="file-card" style="border-left-color: #10b981;">
+                <div class="file-icon">🔔</div>
+                <h3>Notificaciones</h3>
+                <p>✅ Feedback visual<br>✅ Mensajes contextuales<br>✅ Animaciones elegantes<br>✅ Auto-desaparición</p>
+            </div>
+        </div>
+        
+        <footer>
+            <h3 style="color: #1f2937; margin-bottom: 10px;">Creado con ❤️ para ti</h3>
+            <p>Esta es tu tienda online profesional completamente funcional</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: #999;">v1.0 - Abril 2024</p>
+        </footer>
+    </div>
+</body>
+</html>
